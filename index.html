@@ -1,0 +1,806 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Best Coffee & Tea Campaign Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Rubik:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a work board. Top = what's live on the site, then Period 1 (Halloween week, by day), Period 2 (November: promo timeline, month grid, cards per promo), then prep tasks. Click any card for the full design + copy. */
+:root{
+  --bg:#f6f4f1; --surface:#ffffff; --surface-2:#efebe6; --ink:#17130f; --muted:#6b625a; --line:#e2dcd4;
+  --accent:#ec7a1c; --accent-ink:#9a4706; --night:#221a36; --espresso:#2b1a10;
+  --c-email:#1f6f50; --c-social:#2a5bd7; --c-story:#b0287a;
+  --ok:#2f7d3a; --warn:#b26a00; --info:#4b5563;
+  --f-ui:"Rubik","Segoe UI",Arial,sans-serif; --f-display:"Cinzel",Georgia,serif; --f-art:"Bricolage Grotesque","Segoe UI",sans-serif;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#14110f; --surface:#1d1916; --surface-2:#27221e; --ink:#f2ece6; --muted:#a89d92; --line:#352e28;
+  --accent:#f08a33; --accent-ink:#ffb072; --c-email:#5cc69a; --c-social:#7ea3ff; --c-story:#f07cc0;
+  --ok:#6cc47a; --warn:#f0a63a; --info:#a5adba; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#14110f; --surface:#1d1916; --surface-2:#27221e; --ink:#f2ece6; --muted:#a89d92; --line:#352e28;
+  --accent:#f08a33; --accent-ink:#ffb072; --c-email:#5cc69a; --c-social:#7ea3ff; --c-story:#f07cc0;
+  --ok:#6cc47a; --warn:#f0a63a; --info:#a5adba; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.5;direction:ltr}
+.wrap{max-width:1380px;margin:0 auto;padding-block:24px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;text-wrap:balance}
+.en{direction:ltr;unicode-bidi:isolate}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* header */
+.top{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:flex-end;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.top .logo{height:36px;width:auto;display:block;margin-bottom:12px;background:#fff;padding:7px 12px;border-radius:8px;border:1px solid var(--line)}
+.top h1{font-size:clamp(24px,3.2vw,34px);font-weight:700;letter-spacing:-.01em}
+.top p{margin:4px 0 0;color:var(--muted)}
+.stats{display:flex;gap:10px;flex-wrap:wrap}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:8px 14px;min-width:96px}
+.stat b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;color:var(--muted)}
+
+/* live promos */
+.live{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:22px}
+.promo{display:grid;grid-template-columns:120px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px;align-items:center}
+.promo img{width:120px;height:90px;object-fit:cover;border-radius:6px}
+.promo h3{font-size:16px}
+.promo p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
+.tag{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:99px;background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok);margin-bottom:4px}
+.eyeb{font-size:12px;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;font-weight:600}
+
+/* filter bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-block:12px;margin-top:18px;border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.chip{border:1px solid var(--line);background:var(--surface);padding:6px 12px;border-radius:99px;cursor:pointer;font-size:13.5px;display:inline-flex;align-items:center;gap:6px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+.d-email{background:var(--c-email)}.d-social{background:var(--c-social)}.d-story{background:var(--c-story)}
+.bar .sp{flex:1}
+.legend{font-size:12.5px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap}
+
+/* periods */
+.period{margin-top:34px}
+.phead{border-radius:14px;overflow:hidden;position:relative;color:#fff;padding:26px 24px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end}
+.phead img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.phead::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(20,14,34,.92) 0%,rgba(20,14,34,.7) 45%,rgba(20,14,34,.15) 100%)}
+.phead.nov::after{background:linear-gradient(to right,rgba(30,18,10,.95) 0%,rgba(30,18,10,.75) 50%,rgba(30,18,10,.2) 100%)}
+.phead > *{position:relative;z-index:1}
+.phead .k{font-size:12.5px;letter-spacing:.08em;color:#ffb072;font-weight:600}
+.phead h2{font-size:clamp(22px,3vw,30px);font-weight:700}
+.phead p{margin:6px 0 0;max-width:62ch;color:#efe6dc;font-size:14.5px}
+
+.sent{margin-top:14px;background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:12px 14px}
+.sent h3{font-size:14px;margin-bottom:6px}
+.sent ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:4px 18px;font-size:13px;color:var(--muted)}
+.sent li b{color:var(--ink);font-weight:500;font-variant-numeric:tabular-nums}
+
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:12px;margin-top:16px;align-items:start}
+.day{background:var(--surface-2);border-radius:var(--r);padding:10px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.day h4{margin:0;font-size:13.5px;display:flex;justify-content:space-between;align-items:baseline}
+.day h4 small{color:var(--muted);font-weight:400}
+.day.special h4{color:var(--accent-ink)}
+.daynote{font-size:12px;color:var(--muted);background:var(--surface);border-radius:6px;padding:6px 8px}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;text-align:left;padding:0;display:flex;flex-direction:column;width:100%;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.card .meta{padding:8px 10px 10px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.card .row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.card .t{font-size:13.5px;font-weight:600;line-height:1.35}
+.pill{font-size:11px;font-weight:600;padding:1px 7px;border-radius:99px;color:#fff}
+.p-email{background:var(--c-email)}.p-social{background:var(--c-social)}.p-story{background:var(--c-story)}
+:root[data-theme="dark"] .pill{color:#111}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pill{color:#111}}
+.st{font-size:11px;font-weight:600;padding:1px 7px;border-radius:99px;border:1px solid currentColor}
+.s-new{color:var(--info)}.s-draft{color:var(--warn)}.s-prop{color:var(--accent-ink)}.s-live{color:var(--ok)}
+.card.ok{outline:2px solid var(--ok)}
+.card .okmark{display:none;color:var(--ok);font-weight:700;font-size:12px}
+.card.ok .okmark{display:inline}
+
+.thumb{aspect-ratio:4/5;background:#1a1512;display:flex;justify-content:center;align-items:flex-start;overflow:hidden;position:relative}
+.thumb .art{width:100%}
+.thumb .art.r916{width:70.3%}
+.thumb .art.email{width:100%}
+.thumb.is-story{align-items:center}
+.thumb .fade{position:absolute;inset:auto 0 0;height:22%;background:linear-gradient(to top,#1a1512,transparent)}
+.thumb .cnt{position:absolute;top:6px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.65);color:#fff;font-size:11px;padding:1px 7px;border-radius:99px}
+
+/* november timeline */
+.tl{margin-top:16px;display:grid;grid-template-columns:repeat(30,minmax(0,1fr));gap:3px}
+.tlb{border-radius:8px;padding:8px 10px;color:#fff;min-width:0;overflow:hidden}
+.tlb b{display:block;font-size:13.5px}
+.tlb span{font-size:11.5px;opacity:.9}
+.tlb.b-hw{background:#3b2c5c}.tlb.b-A{background:#7a4a2a}.tlb.b-B{background:#2f5e4a}.tlb.b-C{background:#9a5a14}.tlb.b-D{background:#3a3a3a}.tlb.b-E{background:#0e0e0e;border:1px solid var(--accent)}
+.tlb.b-E b{color:#ffb072}
+@media (max-width:820px){.tl{grid-template-columns:1fr}.tl .tlb{grid-column:auto!important}}
+
+.cal{margin-top:16px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;font-size:12px}
+.cal .dh{text-align:center;color:var(--muted);font-weight:600;padding:4px 0}
+.cal .c{background:var(--surface);border:1px solid var(--line);border-radius:8px;min-height:92px;padding:5px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.cal .c.out{background:transparent;border-style:dashed;opacity:.45}
+.cal .n{font-weight:600;font-variant-numeric:tabular-nums;display:flex;justify-content:space-between;gap:4px}
+.cal .n i{font-style:normal;font-weight:500;font-size:10.5px;color:var(--accent-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cal .c[data-b] {box-shadow:inset 0 3px 0 var(--bc)}
+.ev{display:flex;gap:4px;align-items:center;background:var(--surface-2);border:0;border-radius:5px;padding:2px 5px;cursor:pointer;text-align:left;font-size:11.5px;line-height:1.3;min-width:0}
+.ev span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:820px){.cal{display:none}}
+
+.block{margin-top:26px}
+.bh{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:8px}
+.bh h3{font-size:18px}
+.bh .dates{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.bh p{flex-basis:100%;margin:2px 0 0;color:var(--muted);font-size:13.5px;max-width:90ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:12px;margin-top:12px}
+
+/* tasks */
+.tasks{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:10px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
+.task input{margin-top:4px;width:17px;height:17px;accent-color:var(--ok)}
+.task b{display:block;font-size:14px}
+.task span{font-size:13px;color:var(--muted)}
+.task .when{color:var(--accent-ink);font-weight:600;font-size:12px}
+
+/* modal */
+dialog{border:0;padding:0;border-radius:14px;background:var(--surface);color:var(--ink);width:min(1100px,calc(100vw - 24px));max-height:calc(100dvh - 24px);direction:ltr}
+dialog::backdrop{background:rgba(10,8,6,.66)}
+.mb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);max-height:calc(100dvh - 24px)}
+.mart{background:#1a1512;padding:20px;overflow:auto;display:flex;flex-direction:column;gap:14px;align-items:center}
+.mart .art{width:min(100%,430px)}
+.mart .art.r916{width:min(100%,330px)}
+.mart .art.email{width:min(100%,480px)}
+.mart .slides{display:flex;gap:12px;overflow-x:auto;max-width:100%;padding-bottom:6px;direction:ltr;scroll-snap-type:x mandatory}
+.mart .slides .art{flex:none;width:min(78vw,340px);scroll-snap-align:start}
+.mdet{padding:20px 22px;overflow:auto;display:flex;flex-direction:column;gap:12px;min-width:0}
+.mdet h3{font-size:20px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13.5px}
+.kv dt{color:var(--muted)}.kv dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.kv a{color:var(--accent-ink)}
+.cp{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.cp header{display:flex;justify-content:space-between;align-items:center;background:var(--surface-2);padding:5px 10px;font-size:12.5px;font-weight:600}
+.cp header button{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:2px 10px;cursor:pointer;font-size:12px}
+.cp pre{margin:0;padding:10px 12px;white-space:pre-wrap;font-family:var(--f-art);font-size:14px;line-height:1.5;direction:ltr;text-align:left}
+.note{background:color-mix(in srgb,var(--accent) 12%,transparent);border-radius:8px;padding:9px 12px;font-size:13.5px}
+.mtop{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.x{border:1px solid var(--line);background:var(--surface);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:18px;flex:none}
+.appr{display:inline-flex;gap:8px;align-items:center;font-size:14px;font-weight:600;cursor:pointer}
+.appr input{width:18px;height:18px;accent-color:var(--ok)}
+@media (max-width:780px){.mb{grid-template-columns:1fr;overflow:auto}.mart,.mdet{overflow:visible}}
+
+/* ================= ART (the designs) — fixed brand colors, independent of UI theme ================= */
+.art{container-type:inline-size;position:relative;overflow:hidden;font-family:var(--f-art);direction:ltr;text-align:left;flex:none;--a-bg:#1b1430;--a-ink:#f7ead6;--a-acc:#ec7a1c;--a-sub:#d9cfe6;background:var(--a-bg);color:var(--a-ink)}
+.art.r45{aspect-ratio:4/5}.art.r916{aspect-ratio:9/16}.art.r11{aspect-ratio:1/1}
+.th-hw{--a-bg:#1b1430;--a-ink:#f8ecd8;--a-acc:#ec7a1c;--a-sub:#dcd2ea}
+.th-nov{--a-bg:#2b1a10;--a-ink:#fff3e3;--a-acc:#ec7a1c;--a-sub:#e8d6c2}
+.th-bf{--a-bg:#0c0c0c;--a-ink:#ffffff;--a-acc:#ec7a1c;--a-sub:#cfcfcf}
+.th-bogo{--a-bg:#f7efe4;--a-ink:#1b1410;--a-acc:#ec7a1c;--a-sub:#5d4f43}
+.art .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art .shade{position:absolute;inset:0;background:linear-gradient(to top,var(--a-bg) 4%,color-mix(in srgb,var(--a-bg) 82%,transparent) 34%,transparent 66%)}
+.art .brand{position:absolute;top:5cqw;left:5cqw;width:44cqw;z-index:2}
+.art .badge{position:absolute;top:4.5cqw;right:4.5cqw;z-index:2;width:23cqw;height:23cqw;border-radius:50%;background:var(--a-acc);color:#fff;display:grid;place-content:center;text-align:center;font-family:var(--f-display);font-weight:800;font-size:6.6cqw;line-height:.92;transform:rotate(-8deg);box-shadow:0 1cqw 3cqw rgba(0,0,0,.35)}
+.art .badge small{display:block;font-family:var(--f-art);font-size:2.6cqw;letter-spacing:.12em;font-weight:600;margin-top:.8cqw}
+.art .txt{position:absolute;left:6cqw;right:6cqw;bottom:6cqw;z-index:2}
+.art .eb{font-size:3.1cqw;letter-spacing:.2em;text-transform:uppercase;color:var(--a-acc);font-weight:800}
+.art .hd{font-family:var(--f-display);font-weight:700;font-size:9.4cqw;line-height:1.02;margin-top:1.4cqw;text-wrap:balance}
+.art .sb{font-size:3.7cqw;margin-top:2cqw;color:var(--a-sub);line-height:1.35}
+.art .ft{font-size:2.7cqw;letter-spacing:.14em;text-transform:uppercase;margin-top:3cqw;opacity:.85;font-weight:600}
+.art.r916 .hd{font-size:12cqw}.art.r916 .sb{font-size:4.6cqw}.art.r916 .eb{font-size:3.8cqw}.art.r916 .ft{font-size:3.4cqw}
+.art.r916 .txt{bottom:14cqw}
+.art .sticker{display:inline-flex;gap:2cqw;margin-top:4cqw;background:#fff;color:#111;border-radius:2.5cqw;padding:2cqw 3cqw;font-size:3.6cqw;font-weight:700}
+.art .sticker i{font-style:normal;background:#111;color:#fff;border-radius:1.4cqw;padding:.4cqw 1.6cqw;font-variant-numeric:tabular-nums}
+/* product layout */
+.art.prod{background:radial-gradient(120% 80% at 50% 0%,color-mix(in srgb,var(--a-acc) 22%,var(--a-bg)) 0%,var(--a-bg) 60%)}
+.art.prod .txt{top:13cqw;bottom:auto;right:27cqw}
+.art.prod .grid{position:absolute;left:6cqw;right:6cqw;top:40cqw;bottom:12cqw;display:grid;gap:2.6cqw;grid-template-columns:repeat(var(--cols),minmax(0,1fr));grid-auto-rows:minmax(0,1fr)}
+.art.prod .it{background:#fff;border-radius:2.6cqw;padding:2cqw;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#151515;min-width:0;min-height:0;overflow:hidden}
+.art.prod .it img{flex:1 1 0;min-height:0;width:100%;object-fit:contain}
+.art.prod .it b{font-size:3.2cqw;line-height:1.1;text-align:center;margin-top:1cqw}
+.art.prod .it span{font-size:2.8cqw;color:#9a4706;font-weight:700;text-align:center;line-height:1.15}
+.art.prod .it s{color:#888;font-weight:400;font-size:2.5cqw}
+.art.prod[data-n="1"] .it b{font-size:4.6cqw}
+.art.prod[data-n="1"] .it span{font-size:4.2cqw}
+.art.prod > .ft{position:absolute;left:6cqw;right:6cqw;bottom:4.5cqw;margin:0}
+.art.r916.prod .txt{top:18cqw}
+.art.r916.prod .grid{top:56cqw;bottom:20cqw}
+.art.r916.prod > .ft{bottom:9cqw}
+.art.r916.prod .hd{font-size:11cqw}
+/* email */
+.art.email{background:#fff;color:#151515}
+.em-ann{background:var(--a-acc);color:#fff;text-align:center;font-size:2.6cqw;letter-spacing:.14em;font-weight:700;padding:2cqw 3cqw;text-transform:uppercase}
+.em-head{background:#fff;padding:3.6cqw 0;display:flex;justify-content:center;border-bottom:1px solid #eee}
+.em-head img{width:50cqw}
+.em-hero{position:relative;aspect-ratio:2.13/1;overflow:hidden}
+.em-hero img{width:100%;height:100%;object-fit:cover}
+.em-body{background:var(--a-bg);color:var(--a-ink);padding:6cqw 7cqw 7cqw;text-align:center}
+.em-body .eb{font-size:2.8cqw}
+.em-body .hd{font-size:8cqw}
+.em-body p{font-size:3.4cqw;line-height:1.55;color:var(--a-sub);margin:3cqw auto 0;max-width:60ch;white-space:pre-line}
+.em-cta{display:inline-block;margin-top:4.5cqw;background:var(--a-acc);color:#fff;font-weight:800;font-size:3.3cqw;letter-spacing:.12em;text-transform:uppercase;padding:3cqw 7cqw;border-radius:1cqw}
+.th-bogo .em-cta,.th-bf .em-cta{background:var(--a-acc)}
+.em-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.6cqw;padding:5cqw;background:#f5f5f5}
+.em-grid .it{background:#fff;border-radius:1.6cqw;padding:2.6cqw;text-align:center;display:flex;flex-direction:column;gap:1cqw}
+.em-grid .it img{width:100%;aspect-ratio:1;object-fit:contain}
+.em-grid .it.ph img{object-fit:cover;border-radius:1cqw}
+.em-grid b{font-size:3cqw;line-height:1.2}
+.em-grid span{font-size:3cqw;color:#9a4706;font-weight:700}
+.em-grid s{color:#999;font-weight:400}
+.em-ps{background:#f5f5f5;padding:0 7cqw 5cqw;font-size:3cqw;color:#555;text-align:center}
+.em-foot{background:#111;color:#bbb;text-align:center;font-size:2.4cqw;padding:3.4cqw;letter-spacing:.08em}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head><body>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <img class="logo" src="img/logo.svg" alt="Best Coffee & Tea" id="logo">
+      <h1>Marketing Plan: Halloween Week + November 2026</h1>
+      <p>What goes out in Klaviyo and on Facebook and Instagram, day by day, with the full design and copy. Click any card to open the design, the copy to paste and the audience.</p>
+    </div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <div class="eyeb">LIVE ON THE SITE NOW · checked on bestcoffeeandtea.com, 26 Oct 2026</div>
+  <div class="live">
+    <div class="promo"><img src="img/hero1.jpg" alt=""><div><span class="tag">Live on site</span><h3>Halloween Sale: 15% off everything</h3><p>Applied automatically at checkout, no code. Ends November 1. All homepage banners and tiles use the Halloween (HW26) creative.</p></div></div>
+    <div class="promo"><img src="img/flavia.jpg" alt="" style="object-fit:contain;background:#fff"><div><span class="tag">Live on site</span><h3>1+1 FREE on short-dated products</h3><p>Sale | Short Exp Date page: add 1, get 2, while stocks last. Can't be combined with other discounts. Flavia Chai is best before Nov 8.</p></div></div>
+  </div>
+
+  <nav class="bar" aria-label="Filter">
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
+    <button class="chip" data-f="email" aria-pressed="false"><span class="dot d-email"></span>Klaviyo (email)</button>
+    <button class="chip" data-f="social" aria-pressed="false"><span class="dot d-social"></span>Post / Reel FB+IG</button>
+    <button class="chip" data-f="story" aria-pressed="false"><span class="dot d-story"></span>Story</button>
+    <span class="sp"></span>
+    <span class="legend"><span>Status:</span><span class="st s-new">New, to build</span><span class="st s-draft">Draft exists in Klaviyo</span><span class="st s-prop">Proposed offer, needs approval</span><span class="st s-live">Offer is live</span></span>
+  </nav>
+
+  <!-- PERIOD 1 -->
+  <section class="period" id="halloween">
+    <div class="phead"><img src="img/night.jpg" alt=""><div class="k">PERIOD 1 · 26 OCT – 1 NOV</div><h2>Halloween Week: 15% off everything + 1+1 on short-dated</h2><p>No launch email for the Halloween Sale has gone out yet (last week was all Senseo and Jacobs 1+1). So the launch goes out Tuesday, a "last call" on Saturday, and a resend to non-openers on Sunday. On social: one post a day, each on a different category, plus countdown stories.</p></div>
+    <div class="sent"><h3>Already sent from Klaviyo (23–25 Oct) · don't repeat these messages</h3><ul id="sentList"></ul></div>
+    <div class="days" id="hwDays"></div>
+  </section>
+
+  <!-- PERIOD 2 -->
+  <section class="period" id="november">
+    <div class="phead nov"><img src="img/tile-senseo-pods.jpg" alt="" style="object-position:center 60%"><div class="k">PERIOD 2 · 2 – 30 NOV</div><h2>November: Stock-up, gifting, Thanksgiving and Black Friday</h2><p>Five promotions back to back. The first three use prices already on the site (1+1, Mighty Leaf gift box at $32.89, PeleCom bundles at $189.99) so margin isn't worn down before Black Friday. The big discount (20% proposed) is saved for 27–30 Nov, with early access for the email list from 23 Nov.</p></div>
+    <div class="tl" id="timeline"></div>
+    <div class="cal" id="cal"></div>
+    <div id="novBlocks"></div>
+  </section>
+
+  <section class="period" id="prep">
+    <div class="bh"><h3>Prep tasks, in order</h3><p>What needs to happen on the site and in Klaviyo for the plan to work. Checkmarks are saved in your browser only.</p></div>
+    <div class="tasks" id="tasks"></div>
+  </section>
+</div>
+
+<dialog id="dlg"><div class="mb"><div class="mart" id="mArt"></div><div class="mdet" id="mDet"></div></div></dialog>
+
+<script>
+const SITE='https://bestcoffeeandtea.com';
+const L={home:SITE+'/',sale:SITE+'/collections/sale-short-exp-date',senseo:SITE+'/collections/senseo-coffeee-pods',pelecom:SITE+'/collections/pelecom-coffee-machine-for-senseo',tea:SITE+'/collections/mighty-leaf-tea-gift-boxes',blue:SITE+'/collections/lavazza-blue-coffee-capsules',expert:SITE+'/collections/lavazza-expert-coffee-capsules',kcup:SITE+'/collections/keurig-k-cups-coffee-capsules',all:SITE+'/collections/all'};
+const AUD={eng:'ENGAGED CUSTOMERS 2026 (RgzLu5) + Customers with Orders (UuZbAj) · Smart Sending on',nonopen:'Non-openers of the previous email (Resend to non-openers)'};
+
+const SENT=[
+ ['23 Oct','Jacobs 1+1 FREE ($8.20/bag)'],['23 Oct','Senseo Special for you (1+1, $0.19/pod)'],['24 Oct','Senseo 1+1 FREE ($0.19/pod)'],['24 Oct','Senseo 1+1 resend · non-openers'],['25 Oct','Senseo 1+1 · got nothing yet, not cold']];
+
+const HW_HEADS=[['mob1','Spooky Season, Your Way','Senseo pods for every Halloween treat'],['mob2','Your Halloween Coffee Corner','PeleCom machines made for Senseo pods'],['mob3','A Cup for Every Halloween Mood','Lavazza K-Cup bundles for Keurig'],['mob4','Four Blends, Endless Treats','Lavazza Blue capsules'],['mob5','Boldly Dark, Hauntingly Good','Lavazza Expert capsules'],['mob6','Brewed for Spooky Season','Mighty Leaf tea gift boxes']];
+
+const P={ // product tiles with live site prices (26 Oct 2026)
+ classic:{img:'senseo-classic',n:'Senseo Classic · 240 pods',p:'$79.91'},
+ strong:{img:'senseo-strong',n:'Senseo Strong · 240 pods',p:'$80.99'},
+ xs:{img:'senseo-xs',n:'Senseo Extra Strong · 240 pods',p:'$74.99'},
+ decaf:{img:'senseo-decaf',n:'Senseo Decaf · 240 pods',p:'$80.99'},
+ pelecom:{img:'pelecom',n:'PeleCom + 144 Senseo pods',p:'$189.99',w:'$248.99'},
+ box40:{img:'tea-box40',n:'Mighty Leaf Gift Box · 40',p:'$32.89',w:'$46.99'},
+ box30:{img:'tea-box30',n:'Mighty Leaf Gift Box · 30',p:'$45.99'},
+ chai:{img:'chai',n:'Mighty Leaf Masala Chai · 100',p:'$58.44'},
+ kcup:{img:'kcup',n:'Lavazza K-Cup Variety · 40',p:'$42.99'},
+ blue:{img:'blue',n:'Lavazza Blue · 100 capsules',p:'$64.99'},
+ expert:{img:'expert',n:'Lavazza Expert Intenso · 72',p:'$45.99'},
+ flavia:{img:'flavia',n:'Flavia Morning Roast · 100 + 100',p:'$66.49 for both'},
+ fchai:{img:'flavia-chai',n:'Flavia Chai Spice · 20 + 20',p:'$17.99 for both'},
+};
+const pr=(k,p,w)=>Object.assign({},P[k],p!==undefined?{p}:{},w!==undefined?{w}:{});
+
+const BLOCKS={
+ A:{name:'Stock-Up Week',from:2,to:8,st:'live',d:'No new sitewide discount (a rest after the 15%). The live 1+1 on short-dated stock continues, and the message is "price per pod" on the 240-pod Senseo packs: 31–34¢ a cup.'},
+ B:{name:'Tea & Early Gifting',from:9,to:15,st:'live',d:'The 40-pouch Mighty Leaf gift box is already on sale on the site ($32.89, was $46.99). Message: a gift for hosts and the holidays, order early. Lavazza as a gift for machine owners.'},
+ C:{name:'Thanksgiving Hosting',from:16,to:22,st:'live',d:'PeleCom + pods bundles are already discounted ($189.99, was $248.99). Message: a coffee corner ready for guests. Shipping times need checking so an "order by" date can be added before this goes out.'},
+ D:{name:'Black Friday Early Access',from:23,to:26,st:'prop',d:'Proposal: code EARLYBREW, 20% for subscribers only, 23–26 Nov. Rewards the list and builds sign-ups before Black Friday. Needs a code created in Shopify.'},
+ E:{name:'Black Friday → Cyber Monday',from:27,to:30,st:'prop',d:'Proposal: 20% off everything, automatic at checkout like the Halloween Sale (it has to beat 15%). Confirm the final percentage against product cost (COGS) before announcing.'},
+};
+
+const I=[
+/* ===================== HALLOWEEN WEEK ===================== */
+{id:'h1',per:'hw',date:'2026-10-26',time:'12:00 ET',ch:'social',fmt:'Carousel · 6 slides',plat:'Facebook + Instagram',st:'new',
+ t:'Launch carousel: 15% off everything',link:L.home,offer:'15% off everything, automatic at checkout, until 1 Nov',
+ note:'The six slides come straight from the site\'s existing banners (mobile versions), one category each. The first slide carries the 15% badge.',
+ art:{t:'carousel',slides:HW_HEADS.map((h,i)=>({t:'photo',r:'r45',th:'hw',img:h[0],pos:'center 40%',eb:'Halloween Sale · 15% Off',hd:h[1],sb:h[2],ft:i?'bestcoffeeandtea.com':'No code needed · Ends Nov 1',badge:i?null:['15%','OFF EVERYTHING']}))},
+ copy:{caption:`Treats, no tricks 🎃
+
+Our Halloween Sale is on: 15% off everything in the store.
+Senseo pods · PeleCom machines · Lavazza capsules & K-Cups · Mighty Leaf tea
+
+✔ Applied automatically at checkout, no code needed
+⏳ Ends November 1
+
+Swipe to pick your potion, then tap the link in bio.`,tags:'#HalloweenSale #BestCoffeeAndTea #Senseo #SenseoPods #Lavazza #MightyLeafTea #CoffeeLovers #SpookySeason'}},
+{id:'h2',per:'hw',date:'2026-10-26',time:'18:00 ET',ch:'story',fmt:'Story 9:16',plat:'Instagram + Facebook',st:'new',
+ t:'Story: 6 days left',link:L.home,offer:'15% off everything',
+ note:'Add a Countdown sticker to 1 Nov, 11:59 PM, and a link sticker to the site.',
+ art:{t:'photo',r:'r916',th:'hw',img:'mob1',pos:'center 35%',eb:'Halloween Sale',hd:'15% Off Everything',sb:'No code needed · Ends Nov 1',sticker:['Sale ends in','6 days'],ft:'Tap the link ↑'},
+ copy:{caption:`Sticker 1: Countdown → "Halloween Sale ends" · Nov 1, 11:59 PM
+Sticker 2: Link → bestcoffeeandtea.com · text "Shop 15% off"`}},
+{id:'h3',per:'hw',date:'2026-10-27',time:'10:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'new',
+ t:'Launch email: Halloween Sale 15%',link:L.home,aud:AUD.eng,offer:'15% off everything, automatic at checkout, until 1 Nov',
+ note:'This is the first email about the Halloween Sale. "At checkout" prices are today\'s site prices minus 15%.',
+ art:{t:'email',th:'hw',ann:'Halloween Sale · 15% off everything · Ends Nov 1',hero:'hero1',eb:'Treats, no tricks',hd:'15% Off Everything',body:'Until November 1, everything at Best Coffee & Tea is 15% off.\nApplied automatically at checkout. No code needed.',cta:'Shop the Halloween Sale',
+  items:[pr('classic','$67.92 at checkout','$79.91'),pr('pelecom','$161.49 at checkout','$189.99'),pr('kcup','$36.54 at checkout','$42.99'),pr('box40','$27.96 at checkout','$32.89')],ps:'P.S. With the sale, a 240-pod Senseo pack comes to about 28¢ a cup.'},
+ copy:{subject:'🎃 Treats, no tricks: 15% off everything',preview:'Senseo, Lavazza, PeleCom & Mighty Leaf. No code needed. Ends Nov 1.',body:`Hi {{ first_name|default:'there' }},
+
+Halloween came early to our pantry. Until November 1, everything at Best Coffee & Tea is 15% off, and the discount is applied automatically at checkout. No code, no tricks.
+
+Stock up on your Senseo strength, try a new Lavazza blend, or set up a PeleCom coffee corner for the season.
+
+[ Shop the Halloween Sale ]
+
+P.S. With the sale, a 240-pod Senseo pack comes to about 28¢ a cup.`}},
+{id:'h4',per:'hw',date:'2026-10-27',time:'13:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'new',
+ t:'"Pick Your Potion": four Senseo strengths',link:L.senseo,offer:'15% off everything',
+ note:'Engagement post: ask followers to comment their strength. "From $23.79" is the site price for 48 pods after 15%.',
+ art:{t:'prod',r:'r45',th:'hw',eb:'Halloween Sale · 15% Off',hd:'Pick Your Potion',cols:2,badge:['15%','OFF'],
+  items:[{img:'senseo-classic',n:'Classic',p:'Medium roast'},{img:'senseo-strong',n:'Strong',p:'Dark roast'},{img:'senseo-xs',n:'Extra Strong',p:'Darkest roast'},{img:'senseo-decaf',n:'Decaf',p:'No midnight jitters'}],ft:'From $23.79 at checkout · bestcoffeeandtea.com'},
+ copy:{caption:`Which Senseo potion are you? 🧪
+
+☕ Classic: smooth medium roast
+🖤 Strong: dark and bold
+🔥 Extra Strong: our darkest Senseo
+🌙 Decaf: all the flavor, none of the midnight jitters
+
+All four are 15% off until Nov 1, from $23.79 a pack at checkout.
+Comment your pick 👇`,tags:'#Senseo #SenseoPods #CoffeePods #HalloweenSale #BestCoffeeAndTea #CoffeeTime'}},
+{id:'h5',per:'hw',date:'2026-10-28',time:'10:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'draft',
+ t:'1+1 on tea & Flavia (two drafts merged)',link:L.sale,aud:'Tea and Flavia buyers + ENGAGED CUSTOMERS 2026 · not the 6 lists on the drafts',offer:'1+1 FREE on short-dated, while stocks last',
+ note:'Klaviyo has two separate drafts, "Mighty Leaf 1+1 FREE ($0.41/pouch)" and "FLAVIA 1+1 FREE (from $0.33)", both going to 6 lists. Merge them into one email so we don\'t send 5 emails this week on top of the 5 sent 23–25 Oct.',
+ art:{t:'email',th:'bogo',ann:'1+1 Free · Short-dated favorites · While stocks last',hero:'tile-mighty-leaf-pouches',eb:'Buy 1, Get 1 Free',hd:'Double the Tea, Same Price',body:'Some of our favorite teas and Flavia freshpacks have a closer best-before date, so we\'re doubling them.\nAdd 1 to your cart and the 2nd one is added free.',cta:'Shop 1+1 Free',
+  items:[pr('flavia'),pr('fchai')],ps:'Best-before date is in every product title. 1+1 can\'t be combined with other discounts.'},
+ copy:{subject:'1+1 FREE: tea from 41¢ a pouch, Flavia from 33¢',preview:'Short-dated favorites, two for the price of one. While stocks last.',body:`Hi {{ first_name|default:'there' }},
+
+Some of our favorite teas and Flavia freshpacks have a closer best-before date, so we're doubling them: add 1 to your cart and we add the 2nd one free.
+
+• Mighty Leaf pouches: from 41¢ a pouch
+• Flavia freshpacks: from 33¢ a cup
+• Best-before date in every product title
+
+Heads-up: Flavia Chai Spice is best before Nov 8.
+
+[ Shop 1+1 FREE ]
+
+While stocks last. Can't be combined with other discounts.`}},
+{id:'h6',per:'hw',date:'2026-10-28',time:'13:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'new',
+ t:'Mighty Leaf gift box',link:L.tea,offer:'15% off everything',
+ note:'Uses the tile image from the site. $32.89 minus 15% = $27.96 (as shown on the site).',
+ art:{t:'photo',r:'r45',th:'hw',img:'tile-tea-gift-boxes',pos:'center',eb:'Halloween Sale · 15% Off',hd:'Brewed for Spooky Season',sb:'Mighty Leaf gift box · 40 pouches · $27.96 at checkout',badge:['15%','OFF'],ft:'Ends Nov 1'},
+ copy:{caption:`Hosting a Halloween night? 🍂
+
+Our Mighty Leaf gift box holds 40 individually wrapped pouches in 8 flavors, ready to share (or keep).
+
+$32.89 → $27.96 at checkout until Nov 1. No code needed.`,tags:'#MightyLeafTea #TeaLovers #TeaGift #HalloweenSale #BestCoffeeAndTea'}},
+{id:'h7',per:'hw',date:'2026-10-29',time:'13:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'live',
+ t:'"Double Treat": 1+1 on short-dated',link:L.sale,offer:'1+1 FREE, not combinable',
+ note:'The 1+1 offer is already live on the site. Say clearly that it doesn\'t stack with the 15%.',
+ art:{t:'prod',r:'r45',th:'bogo',eb:'Short-Dated Shelf',hd:'Buy 1, Get 1 Free',cols:2,badge:['1+1','FREE'],items:[pr('flavia'),pr('fchai')],ft:'Add 1 to cart, get 2 delivered · While stocks last'},
+ copy:{caption:`Double treat 👻
+
+Our short-dated shelf is 1+1: add one pack and we add the second one free. Senseo, Mighty Leaf, Flavia and more, with the best-before date right in the title.
+
+While stocks last. Link in bio → Sale | Short Exp Date
+(1+1 can't be combined with other discounts.)`,tags:'#BOGO #CoffeeDeals #Flavia #MightyLeafTea #BestCoffeeAndTea'}},
+{id:'h8',per:'hw',date:'2026-10-30',time:'13:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'new',
+ t:'PeleCom: your Halloween coffee corner',link:L.pelecom,offer:'15% off everything',
+ note:'Machine + 144 pods bundle: $189.99 on the site, $161.49 after 15%.',
+ art:{t:'photo',r:'r45',th:'hw',img:'tile-pelecom-machine',pos:'center',eb:'Halloween Sale · 15% Off',hd:'Your Halloween Coffee Corner',sb:'PeleCom + 144 Senseo pods · $161.49 at checkout',badge:['15%','OFF'],ft:'2 days left'},
+ copy:{caption:`One touch, rich crema, no tricks ☕
+
+The PeleCom coffee machine is made for Senseo pods. The bundle with 144 pods is $189.99 (was $248.99), and with our Halloween Sale it's $161.49 at checkout.
+
+Ends Nov 1. Link in bio.`,tags:'#PeleCom #Senseo #CoffeeMachine #CoffeeCorner #HalloweenSale #BestCoffeeAndTea'}},
+{id:'h9',per:'hw',date:'2026-10-30',time:'18:00 ET',ch:'story',fmt:'Story 9:16',plat:'Instagram + Facebook',st:'new',
+ t:'Story: 2 days left',link:L.home,offer:'15% off everything',note:'Same countdown sticker.',
+ art:{t:'photo',r:'r916',th:'hw',img:'mob2',pos:'center 40%',eb:'Halloween Sale',hd:'2 Days Left',sb:'15% off everything · No code needed',sticker:['Sale ends in','2 days'],ft:'Tap the link ↑'},
+ copy:{caption:`Countdown sticker → Nov 1, 11:59 PM
+Link sticker → bestcoffeeandtea.com · "Shop 15% off"`}},
+{id:'h10',per:'hw',date:'2026-10-31',time:'10:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'draft',
+ t:'Last call: 15% ends tomorrow',link:L.home,aud:AUD.eng,offer:'15% off everything, last day tomorrow',
+ note:'A draft "Halloween last call 15% | Ends Nov 1" exists with 6 lists. Recommend narrowing it to engaged contacts only.',
+ art:{t:'email',th:'hw',ann:'Last call · 15% off ends tomorrow',hero:'night',eb:'Happy Halloween',hd:'Last Call: 15% Off',body:'Quick reminder: 15% off everything ends tomorrow, November 1.\nIt applies automatically at checkout. All you need to do is fill the cart.',cta:'Shop Before It Ends',
+  items:[{img:'tile-senseo-pods',n:'Senseo Pods',p:'15% off',ph:1},{img:'tile-lavazza-k-cups',n:'Lavazza K-Cups',p:'15% off',ph:1},{img:'tile-pelecom-machine',n:'PeleCom Machines',p:'15% off',ph:1},{img:'tile-tea-gift-boxes',n:'Tea Gift Boxes',p:'15% off',ph:1}]},
+ copy:{subject:'Last call: 15% off ends tomorrow 🕯️',preview:'Your Halloween treat expires Nov 1 at midnight.',body:`Hi {{ first_name|default:'there' }},
+
+Happy Halloween! Quick reminder: 15% off everything ends tomorrow, November 1.
+
+It applies automatically at checkout, so all you need to do is fill the cart.
+Senseo · Lavazza · PeleCom · Mighty Leaf
+
+[ Shop Before It Ends ]`}},
+{id:'h11',per:'hw',date:'2026-10-31',time:'12:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'new',
+ t:'Happy Halloween',link:L.home,offer:'15% off everything, ends tomorrow',note:'Night background from the sale banner on the site.',
+ art:{t:'photo',r:'r45',th:'hw',img:'night-mob',pos:'center',eb:'From all of us at Best Coffee & Tea',hd:'Happy Halloween',sb:'15% off everything ends tomorrow',badge:['15%','OFF'],brand:1,ft:'Ends Nov 1 · No code needed'},
+ copy:{caption:`Happy Halloween from all of us at Best Coffee & Tea 🎃🕯️
+
+Whatever you're brewing tonight, make it a good one.
+
+Last chance: 15% off everything ends tomorrow, Nov 1.`,tags:'#HappyHalloween #Halloween2026 #CoffeeLovers #BestCoffeeAndTea'}},
+{id:'h12',per:'hw',date:'2026-10-31',time:'18:00 ET',ch:'story',fmt:'Story 9:16',plat:'Instagram + Facebook',st:'new',
+ t:'Story: ends tomorrow',link:L.home,offer:'15% off everything',note:'',
+ art:{t:'photo',r:'r916',th:'hw',img:'mob4',pos:'center 40%',eb:'Halloween Sale',hd:'Ends Tomorrow',sb:'15% off everything',sticker:['Sale ends in','1 day'],ft:'Tap the link ↑'},
+ copy:{caption:`Countdown sticker → Nov 1, 11:59 PM
+Poll sticker: "Coffee or tea tonight?" ☕ / 🍵`}},
+{id:'h13',per:'hw',date:'2026-11-01',time:'12:00 ET',ch:'email',fmt:'Resend',plat:'Klaviyo',st:'new',
+ t:'Final hours: resend to non-openers',link:L.home,aud:AUD.nonopen+' "Last call" from 31 Oct',offer:'15% off everything, final hours',
+ note:'Clone of the 31 Oct email with a new subject line, sent only to non-openers.',
+ art:{t:'email',th:'hw',ann:'Final hours · ends tonight at midnight',hero:'hero4',eb:'Final hours',hd:'15% Off Ends Tonight',body:'This is the last day of our Halloween Sale.\nNo code needed: the discount is applied at checkout.',cta:'Shop the Last Hours',items:[pr('classic','$67.92 at checkout','$79.91'),pr('blue','$55.24 at checkout','$64.99')]},
+ copy:{subject:'Final hours: 15% off ends at midnight',preview:'No code needed. Applied at checkout.',body:`Hi {{ first_name|default:'there' }},
+
+This is the last day of our Halloween Sale. 15% off everything ends tonight at midnight.
+
+No code needed: the discount is applied at checkout.
+
+[ Shop the Last Hours ]`}},
+{id:'h14',per:'hw',date:'2026-11-01',time:'15:00 ET',ch:'story',fmt:'Story 9:16',plat:'Instagram + Facebook',st:'new',
+ t:'Story: final hours',link:L.home,offer:'15% off everything',note:'',
+ art:{t:'photo',r:'r916',th:'hw',img:'mob5',pos:'center 40%',eb:'Halloween Sale',hd:'Final Hours',sb:'15% off ends at midnight',sticker:['Ends','tonight'],ft:'Tap the link ↑'},
+ copy:{caption:`Countdown sticker → Nov 1, 11:59 PM
+Link sticker → bestcoffeeandtea.com`}},
+
+/* ===================== NOVEMBER ===================== */
+{id:'n1',per:'nov',b:'A',date:'2026-11-02',time:'12:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'live',
+ t:'"Do the Pod Math": price per cup',link:L.senseo,offer:'Current site prices',
+ note:'Classic 240 = $79.91 = 33¢ a pod. Extra Strong 240 = $74.99 = 31¢ a pod.',
+ art:{t:'prod',r:'r45',th:'nov',eb:'Stock-Up Week',hd:'Do the Pod Math',cols:2,items:[pr('classic','33¢ a cup'),pr('xs','31¢ a cup')],ft:'Fewer reorders, more mornings · bestcoffeeandtea.com'},
+ copy:{caption:`Halloween's over. Coffee season isn't 🍂
+
+Quick pod math on our biggest Senseo packs:
+☕ Classic, 240 pods: $79.91 → 33¢ a cup
+🔥 Extra Strong, 240 pods: $74.99 → 31¢ a cup
+
+Fewer reorders, more mornings. Link in bio.`,tags:'#Senseo #SenseoPods #CoffeePods #StockUp #BestCoffeeAndTea'}},
+{id:'n2',per:'nov',b:'A',date:'2026-11-03',time:'10:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'live',
+ t:'1+1 still on + Flavia Chai until 8 Nov',link:L.sale,aud:AUD.eng,offer:'1+1 on short-dated',
+ note:'Can be built from the existing Klaviyo draft "1+1 FREE launch | Short-dated favorites".',
+ art:{t:'email',th:'bogo',ann:'1+1 Free · while stocks last',hero:'tile-jacobs',eb:'Missed Halloween?',hd:'The 1+1 Shelf Is Still Stocked',body:'Add 1 short-dated pack to your cart and we add the 2nd one free.\nBest-before date in every product title.',cta:'Shop 1+1 Free',items:[pr('flavia'),pr('fchai')],ps:'Flavia Chai Spice is best before Nov 8.'},
+ copy:{subject:'Missed Halloween? The 1+1 shelf is still stocked',preview:'Add 1, get 2. Flavia Chai is best before Nov 8.',body:`Hi {{ first_name|default:'there' }},
+
+The Halloween Sale is over, but our short-dated shelf is still 1+1: add one pack to your cart and we add the second one free.
+
+Senseo, Mighty Leaf, Flavia and Jacobs, with the best-before date in every product title.
+
+Heads-up: Flavia Chai Spice is best before Nov 8.
+
+[ Shop 1+1 FREE ]
+
+While stocks last. Can't be combined with other discounts.`}},
+{id:'n3',per:'nov',b:'A',date:'2026-11-04',time:'12:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'new',
+ t:'Guide: which Senseo is yours',link:L.senseo,offer:'—',note:'Value content, no offer. Keeps attention between promotions.',
+ art:{t:'prod',r:'r45',th:'nov',eb:'Senseo Guide',hd:'Find Your Strength',cols:2,items:[{img:'senseo-classic',n:'Classic',p:'Smooth, everyday'},{img:'senseo-strong',n:'Strong',p:'Bold, dark roast'},{img:'senseo-xs',n:'Extra Strong',p:'Most intense'},{img:'senseo-decaf',n:'Decaf',p:'Evening cup'}],ft:'Save this for your next order'},
+ copy:{caption:`Not sure which Senseo to reorder? Here's the cheat sheet 👇
+
+☕ Classic: smooth medium roast for every day
+🖤 Strong: bold dark roast
+🔥 Extra Strong: our most intense Senseo
+🌙 Decaf: the evening cup
+
+Save this post for your next order. Which one is in your machine right now?`,tags:'#Senseo #SenseoPods #CoffeeGuide #BestCoffeeAndTea'}},
+{id:'n4',per:'nov',b:'A',date:'2026-11-05',time:'10:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'live',
+ t:'Senseo by the pod: 240-pod packs',link:L.senseo,aud:'Senseo buyers (TR5bY8) + machine owners (SLhBrE)',offer:'Current prices',
+ note:'Targeted to Senseo buyers only. All four 240-pod packs at today\'s site prices.',
+ art:{t:'email',th:'nov',ann:'Stock-up week · Senseo by the pod',hero:'hero1',eb:'Stock-Up Week',hd:'Your Senseo, From 31¢ a Pod',body:'Our 240-pod packs, side by side.\nOne order, about 8 months of one cup a day.',cta:'Shop 240-Pod Packs',items:[pr('classic','$79.91 · 33¢/pod'),pr('strong','$80.99 · 34¢/pod'),pr('xs','$74.99 · 31¢/pod'),pr('decaf','$80.99 · 34¢/pod','$129.95')]},
+ copy:{subject:'Your Senseo, from 31¢ a pod',preview:'The 240-pod packs, side by side.',body:`Hi {{ first_name|default:'there' }},
+
+If Senseo is your daily cup, the 240-pod pack is the one that keeps you stocked: about 8 months at one cup a day.
+
+• Classic: $79.91 (33¢ a pod)
+• Strong: $80.99 (34¢ a pod)
+• Extra Strong: $74.99 (31¢ a pod)
+• Decaf: $80.99, was $129.95 (34¢ a pod)
+
+[ Shop 240-Pod Packs ]`}},
+{id:'n5',per:'nov',b:'A',date:'2026-11-06',time:'15:00 ET',ch:'story',fmt:'Story 9:16',plat:'Instagram + Facebook',st:'live',
+ t:'Story: Flavia Chai, last 2 days',link:L.sale,offer:'1+1',note:'Flavia Chai Spice is best before 8 Nov. Skip if it sells out first.',
+ art:{t:'prod',r:'r916',th:'bogo',eb:'Last 2 days',hd:'Chai Spice 1+1',cols:1,badge:['1+1','FREE'],items:[pr('fchai')],ft:'Best before Nov 8 · Tap the link ↑'},
+ copy:{caption:`Link sticker → Sale | Short Exp Date
+Text: "Flavia Chai Spice, 1+1, best before Nov 8"`}},
+{id:'n6',per:'nov',b:'B',date:'2026-11-09',time:'12:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'live',
+ t:'Mighty Leaf gift box as a gift',link:L.tea,offer:'$32.89, was $46.99 (already live)',note:'The sale price is already on the site.',
+ art:{t:'prod',r:'r45',th:'nov',eb:'Early Gifting',hd:'The Gift That Steeps',cols:1,items:[pr('box40')],ft:'40 pouches · 8 flavors · bestcoffeeandtea.com'},
+ copy:{caption:`The easiest host gift on your list 🎁
+
+Mighty Leaf gift box: 40 individually wrapped pouches, 8 flavors, one beautiful box.
+$32.89 (was $46.99).
+
+Gift it, or keep it on the counter for the season. Link in bio.`,tags:'#MightyLeafTea #TeaGift #HostessGift #HolidayGifts #BestCoffeeAndTea'}},
+{id:'n7',per:'nov',b:'B',date:'2026-11-10',time:'10:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'live',
+ t:'Tea gifts for hosts and the holidays',link:L.tea,aud:AUD.eng,offer:'Current sale prices',note:'',
+ art:{t:'email',th:'nov',ann:'Early gifting · ship before the rush',hero:'hero6',eb:'Early Gifting',hd:'The Host Gift That Does the Work',body:'Whole-leaf tea, individually wrapped, in a box that\'s ready to give.\nOrder early, before holiday shipping slows down.',cta:'Shop Tea Gifts',items:[pr('box40'),pr('box30'),pr('chai'),pr('kcup')]},
+ copy:{subject:'The host gift that does the work',preview:'Mighty Leaf gift box: 40 pouches, 8 flavors, $32.89.',body:`Hi {{ first_name|default:'there' }},
+
+Thanksgiving dinners and holiday visits are coming. Here's a gift that's ready the moment you buy it:
+
+Mighty Leaf gift box: 40 whole-leaf pouches in 8 flavors, individually wrapped. $32.89 (was $46.99).
+
+Order early, before holiday shipping slows down.
+
+[ Shop Tea Gifts ]`}},
+{id:'n8',per:'nov',b:'B',date:'2026-11-11',time:'12:00 ET',ch:'social',fmt:'Reel 9:16',plat:'Instagram Reels + Facebook',st:'new',
+ t:'Reel: Steep, sip, repeat',link:L.tea,offer:'—',note:'Short reel (8–12 s) from the existing image: a slow camera push toward the gift box. Can be animated from the still.',
+ art:{t:'photo',r:'r916',th:'nov',img:'mob6',pos:'center 45%',eb:'Mighty Leaf',hd:'Steep, Sip, Repeat',sb:'Whole-leaf tea, one pouch at a time',ft:'bestcoffeeandtea.com'},
+ copy:{caption:`Steep, sip, repeat 🍵
+
+Whole-leaf Mighty Leaf tea, one silky pouch at a time. Which flavor is your November cup?`,tags:'#MightyLeafTea #TeaTime #TeaReels #BestCoffeeAndTea'}},
+{id:'n9',per:'nov',b:'B',date:'2026-11-12',time:'10:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'live',
+ t:'Lavazza: a capsule for every machine',link:L.blue,aud:'Lavazza buyers + ENGAGED CUSTOMERS 2026',offer:'Current prices',note:'',
+ art:{t:'email',th:'nov',ann:'Espresso night in',hero:'tile-lavazza-blue',eb:'Lavazza',hd:'Pick Your Lavazza',body:'Lavazza Blue, Lavazza Expert or K-Cups for Keurig.\nTell us your machine, we\'ve got the capsule.',cta:'Shop Lavazza',items:[pr('blue'),pr('expert'),pr('kcup')]},
+ copy:{subject:'Espresso night in: pick your Lavazza',preview:'Blue, Expert or K-Cups. One for every machine.',body:`Hi {{ first_name|default:'there' }},
+
+Whatever machine is on your counter, there's a Lavazza for it:
+
+• Lavazza Blue: 100 capsules, $64.99
+• Lavazza Expert Intenso: 72 capsules, $45.99
+• K-Cups for Keurig: 40-count variety, $42.99
+
+[ Shop Lavazza ]`}},
+{id:'n10',per:'nov',b:'B',date:'2026-11-13',time:'12:00 ET',ch:'social',fmt:'Carousel · 3 slides',plat:'Facebook + Instagram',st:'new',
+ t:'Carousel: which machine do you have?',link:L.all,offer:'—',note:'Three product slides on an espresso background.',
+ art:{t:'carousel',slides:[
+  {t:'prod',r:'r45',th:'nov',eb:'Which machine?',hd:'Lavazza Blue',cols:1,items:[pr('blue')],ft:'For Lavazza Blue machines'},
+  {t:'prod',r:'r45',th:'nov',eb:'Which machine?',hd:'Lavazza Expert',cols:1,items:[pr('expert')],ft:'For Lavazza Classy machines'},
+  {t:'prod',r:'r45',th:'nov',eb:'Which machine?',hd:'K-Cups',cols:1,items:[pr('kcup')],ft:'For Keurig brewers'}]},
+ copy:{caption:`Tell us your machine, we'll match the capsule ☕
+
+1️⃣ Lavazza Blue → Blue capsules
+2️⃣ Lavazza Classy → Expert capsules
+3️⃣ Keurig → Lavazza K-Cups
+
+Which one is on your counter?`,tags:'#Lavazza #LavazzaBlue #KCups #Keurig #Espresso #BestCoffeeAndTea'}},
+{id:'n11',per:'nov',b:'C',date:'2026-11-16',time:'12:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'live',
+ t:'PeleCom: coffee ready for guests',link:L.pelecom,offer:'$189.99, was $248.99 (already live)',note:'',
+ art:{t:'prod',r:'r45',th:'nov',eb:'Thanksgiving Hosting',hd:'Host-Ready Coffee',cols:1,items:[pr('pelecom')],ft:'One touch per cup · bestcoffeeandtea.com'},
+ copy:{caption:`Hosting Thanksgiving? Let the coffee take care of itself 🦃☕
+
+PeleCom machine + 144 Senseo pods: $189.99 (was $248.99).
+One touch per cup, so every guest gets theirs fresh.
+
+Order early for the holiday. Link in bio.`,tags:'#Thanksgiving #PeleCom #Senseo #CoffeeMachine #HostingTips #BestCoffeeAndTea'}},
+{id:'n12',per:'nov',b:'C',date:'2026-11-17',time:'10:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'live',
+ t:'Thanksgiving: PeleCom bundles',link:L.pelecom,aud:AUD.eng+' · exclude machine owners (SLhBrE)',offer:'Current bundle prices',note:'Add an "order by" date once shipping times are confirmed.',
+ art:{t:'email',th:'nov',ann:'Thanksgiving hosting · order early',hero:'hero2',eb:'Thanksgiving',hd:'Host-Ready Coffee for Thanksgiving',body:'A one-touch coffee corner your guests can use themselves.\nMachine + Senseo pods, bundled.',cta:'Shop PeleCom Bundles',items:[pr('pelecom'),{img:'pelecom',n:'PeleCom + 240 pods',p:'$199.99',w:'$263.98'}]},
+ copy:{subject:'Host-ready coffee for Thanksgiving 🦃',preview:'PeleCom + 144 Senseo pods, $189.99 (was $248.99).',body:`Hi {{ first_name|default:'there' }},
+
+Thanksgiving means a full house and a lot of coffee. Set up a one-touch coffee corner your guests can use themselves:
+
+• PeleCom machine + 144 Senseo pods: $189.99 (was $248.99)
+• PeleCom machine + 240 Senseo pods: $199.99 (was $263.98)
+
+Order early so it arrives before the holiday.
+
+[ Shop PeleCom Bundles ]`}},
+{id:'n13',per:'nov',b:'C',date:'2026-11-18',time:'15:00 ET',ch:'story',fmt:'Story 9:16',plat:'Instagram + Facebook',st:'new',
+ t:'Story: order before the holiday',link:L.all,offer:'—',note:'Update with the real last order date based on shipping times.',
+ art:{t:'prod',r:'r916',th:'nov',eb:'Thanksgiving',hd:'Order Before the Rush',cols:1,items:[pr('classic')],ft:'Tap the link ↑'},
+ copy:{caption:`Text: "Hosting next week? Order your pods now so they arrive in time."
+Link sticker → bestcoffeeandtea.com`}},
+{id:'n14',per:'nov',b:'C',date:'2026-11-19',time:'10:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'prop',
+ t:'Black Friday teaser: early access for subscribers',link:L.home,aud:'All subscribed profiles · Smart Sending on',offer:'Announces 23 Nov',note:'Builds anticipation. Don\'t reveal the percentage until it\'s approved.',
+ art:{t:'email',th:'bf',ann:'Subscribers only · Nov 23',hero:'lifestyle',eb:'Black Friday is brewing',hd:'You Get In First',body:'Our biggest sale of the year opens to email subscribers on Monday, Nov 23.\nFour days before everyone else.',cta:'Mark Your Calendar',items:[]},
+ copy:{subject:'Black Friday starts early for you ☕',preview:'Subscribers get in on Monday, Nov 23. Four days before everyone else.',body:`Hi {{ first_name|default:'there' }},
+
+Our biggest sale of the year is almost here, and you're getting in first.
+
+On Monday, November 23, we'll send you an early-access code. Black Friday prices for subscribers, four days before everyone else.
+
+Keep an eye on your inbox.`}},
+{id:'n15',per:'nov',b:'C',date:'2026-11-20',time:'12:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'prop',
+ t:'Black Friday teaser on social + sign-up',link:L.home,offer:'Sign up for early access',note:'Goal: list sign-ups before 23 Nov. Link to the sign-up form on the site.',
+ art:{t:'prod',r:'r45',th:'bf',eb:'Black Friday is brewing',hd:'Get In Early',cols:3,items:[pr('classic',''),pr('blue',''),pr('box40','','')],ft:'Email subscribers get access Nov 23'},
+ copy:{caption:`Black Friday is brewing ☕🖤
+
+Our email subscribers get Black Friday prices on Nov 23, four days early.
+Join the list through the link in bio and you're in.`,tags:'#BlackFriday #CoffeeDeals #BestCoffeeAndTea'}},
+{id:'n16',per:'nov',b:'D',date:'2026-11-23',time:'09:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'prop',
+ t:'Early access: code EARLYBREW',link:L.home,aud:'All subscribed profiles',offer:'Proposal: 20% with code EARLYBREW, 23–26 Nov',note:'Needs the code created in Shopify before sending.',
+ art:{t:'email',th:'bf',ann:'Early access · subscribers only',hero:'hero3',eb:'Early Access',hd:'20% Off Everything, Starting Now',body:'Use code EARLYBREW at checkout.\nValid through Thursday, Nov 26. Everyone else waits until Friday.',cta:'Shop Early Access',items:[pr('classic','$63.93 with code','$79.91'),pr('pelecom','$151.99 with code','$189.99'),pr('blue','$51.99 with code','$64.99'),pr('box40','$26.31 with code','$32.89')]},
+ copy:{subject:'Your early access is open: 20% off everything',preview:'Code EARLYBREW. Everyone else waits until Friday.',body:`Hi {{ first_name|default:'there' }},
+
+As promised, you're in first. Black Friday prices start now for subscribers:
+
+20% off everything with code EARLYBREW
+Valid through Thursday, November 26.
+
+[ Shop Early Access ]
+
+Everyone else waits until Friday.`}},
+{id:'n17',per:'nov',b:'D',date:'2026-11-23',time:'12:00 ET',ch:'story',fmt:'Story 9:16',plat:'Instagram + Facebook',st:'prop',
+ t:'Story: early access is open',link:L.home,offer:'Sign-up',note:'',
+ art:{t:'photo',r:'r916',th:'bf',img:'mob3',pos:'center 40%',eb:'Black Friday',hd:'Early Access Is Open',sb:'For email subscribers. Join to get the code.',ft:'Tap the link ↑'},
+ copy:{caption:`Text: "Our subscribers just got their Black Friday code. Join the list to get yours."
+Link sticker → signup page`}},
+{id:'n18',per:'nov',b:'D',date:'2026-11-26',time:'10:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'new',
+ t:'Happy Thanksgiving',link:L.home,offer:'—',note:'A thank-you post with no selling. The Black Friday hint is only in the last line.',
+ art:{t:'photo',r:'r45',th:'nov',img:'tile-senseo-pods',pos:'center',eb:'From all of us',hd:'Happy Thanksgiving',sb:'Thank you for brewing with us this year',brand:1,ft:'See you tomorrow ☕'},
+ copy:{caption:`Happy Thanksgiving from all of us at Best Coffee & Tea 🧡
+
+Thank you for every cup you brewed with us this year.
+
+See you tomorrow. Something big is brewing.`,tags:'#HappyThanksgiving #Thankful #CoffeeLovers #BestCoffeeAndTea'}},
+{id:'n19',per:'nov',b:'E',date:'2026-11-27',time:'07:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'prop',
+ t:'Black Friday: 20% off everything',link:L.home,aud:AUD.eng+' + all subscribed profiles',offer:'Proposal: 20% automatic at checkout, 27–30 Nov',note:'',
+ art:{t:'email',th:'bf',ann:'Black Friday · 20% off everything · Ends Nov 30',hero:'hero1',eb:'Black Friday',hd:'20% Off Everything',body:'Our biggest sale of the year. Applied automatically at checkout.\nSenseo · Lavazza · PeleCom · Mighty Leaf',cta:'Shop Black Friday',items:[pr('classic','$63.93','$79.91'),pr('pelecom','$151.99','$189.99'),pr('kcup','$34.39','$42.99'),pr('box40','$26.31','$32.89')]},
+ copy:{subject:'Black Friday: 20% off everything ☕',preview:'Our biggest sale of the year. No code needed. Ends Monday.',body:`Hi {{ first_name|default:'there' }},
+
+It's here. 20% off everything at Best Coffee & Tea, applied automatically at checkout.
+
+Stock up on Senseo, gift a Mighty Leaf box, or finally get the PeleCom.
+
+[ Shop Black Friday ]
+
+Ends Monday, November 30 at midnight.`}},
+{id:'n20',per:'nov',b:'E',date:'2026-11-27',time:'08:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'prop',
+ t:'Black Friday is live',link:L.home,offer:'20% off everything (proposed)',note:'',
+ art:{t:'prod',r:'r45',th:'bf',eb:'Black Friday',hd:'20% Off Everything',cols:2,badge:['20%','OFF'],items:[pr('classic','$63.93','$79.91'),pr('pelecom','$151.99','$189.99'),pr('blue','$51.99','$64.99'),pr('box40','$26.31','$32.89')],ft:'No code needed · Ends Nov 30'},
+ copy:{caption:`Black Friday is live 🖤
+
+20% off everything: Senseo pods, PeleCom machines, Lavazza capsules, Mighty Leaf tea.
+Applied automatically at checkout. Ends Monday, Nov 30.
+
+Link in bio.`,tags:'#BlackFriday #BlackFridayDeals #Senseo #Lavazza #MightyLeafTea #BestCoffeeAndTea'}},
+{id:'n21',per:'nov',b:'E',date:'2026-11-27',time:'18:00 ET',ch:'story',fmt:'Story 9:16',plat:'Instagram + Facebook',st:'prop',
+ t:'Story: Black Friday',link:L.home,offer:'20%',note:'',
+ art:{t:'prod',r:'r916',th:'bf',eb:'Black Friday',hd:'20% Off Everything',cols:2,badge:['20%','OFF'],items:[pr('classic',''),pr('xs',''),pr('kcup',''),pr('box40','','')],ft:'Ends Nov 30 · Tap the link ↑'},
+ copy:{caption:`Countdown sticker → Nov 30, 11:59 PM
+Link sticker → bestcoffeeandtea.com`}},
+{id:'n22',per:'nov',b:'E',date:'2026-11-28',time:'12:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'prop',
+ t:'Small Business Saturday',link:L.home,offer:'20% (proposed)',note:'',
+ art:{t:'photo',r:'r45',th:'bf',img:'hero2',pos:'center',eb:'Small Business Saturday',hd:'Shop Small, Sip Well',sb:'20% off everything through Monday',badge:['20%','OFF'],ft:'bestcoffeeandtea.com'},
+ copy:{caption:`It's Small Business Saturday ☕
+
+We're a small team that packs every order ourselves. If you're shopping small this weekend, we'd love to be on your list.
+
+20% off everything through Monday.`,tags:'#SmallBusinessSaturday #ShopSmall #BlackFridayWeekend #BestCoffeeAndTea'}},
+{id:'n23',per:'nov',b:'E',date:'2026-11-29',time:'10:00 ET',ch:'email',fmt:'Resend',plat:'Klaviyo',st:'prop',
+ t:'Weekend: resend to non-openers',link:L.home,aud:AUD.nonopen+' Black Friday email',offer:'20%',note:'',
+ art:{t:'email',th:'bf',ann:'Black Friday weekend · 20% off',hero:'hero5',eb:'Still on',hd:'20% Off, All Weekend',body:'In case you missed it: 20% off everything through Monday.\nNo code needed.',cta:'Shop Now',items:[pr('expert','$36.79','$45.99'),pr('xs','$59.99','$74.99')]},
+ copy:{subject:'In case you missed it: 20% off everything',preview:'No code needed. Through Monday.',body:`Hi {{ first_name|default:'there' }},
+
+In case Friday got busy: 20% off everything is still on, through Monday night. No code needed.
+
+[ Shop Now ]`}},
+{id:'n24',per:'nov',b:'E',date:'2026-11-30',time:'09:00 ET',ch:'email',fmt:'Campaign email',plat:'Klaviyo',st:'prop',
+ t:'Cyber Monday: last day',link:L.home,aud:AUD.eng+' + all subscribed profiles',offer:'20%, last day',note:'',
+ art:{t:'email',th:'bf',ann:'Cyber Monday · last day',hero:'hero4',eb:'Cyber Monday',hd:'Last Day for 20% Off',body:'Our biggest sale of the year ends tonight at midnight.\nApplied automatically at checkout.',cta:'Shop Before Midnight',items:[pr('classic','$63.93','$79.91'),pr('blue','$51.99','$64.99')]},
+ copy:{subject:'Cyber Monday: last day for 20% off',preview:'Ends tonight at midnight. No code needed.',body:`Hi {{ first_name|default:'there' }},
+
+Last call: our Black Friday sale ends tonight at midnight. 20% off everything, applied at checkout.
+
+[ Shop Before Midnight ]`}},
+{id:'n25',per:'nov',b:'E',date:'2026-11-30',time:'12:00 ET',ch:'social',fmt:'Post 4:5',plat:'Facebook + Instagram',st:'prop',
+ t:'Cyber Monday: last day',link:L.home,offer:'20%',note:'',
+ art:{t:'prod',r:'r45',th:'bf',eb:'Cyber Monday',hd:'Last Day: 20% Off',cols:1,badge:['ENDS','TONIGHT'],items:[pr('pelecom','$151.99','$189.99')],ft:'No code needed · bestcoffeeandtea.com'},
+ copy:{caption:`Last day ⏳
+
+20% off everything ends tonight at midnight. If the PeleCom bundle has been in your cart since Friday, this is the moment: $151.99 at checkout.`,tags:'#CyberMonday #CyberMondayDeals #PeleCom #Senseo #BestCoffeeAndTea'}},
+{id:'n26',per:'nov',b:'E',date:'2026-11-30',time:'18:00 ET',ch:'story',fmt:'Story 9:16',plat:'Instagram + Facebook',st:'prop',
+ t:'Story: final hours',link:L.home,offer:'20%',note:'',
+ art:{t:'prod',r:'r916',th:'bf',eb:'Cyber Monday',hd:'Final Hours',cols:1,badge:['20%','OFF'],items:[pr('classic','$63.93','$79.91')],ft:'Ends at midnight · Tap the link ↑'},
+ copy:{caption:`Countdown sticker → Nov 30, 11:59 PM`}},
+];
+
+const TASKS=[
+ ['Today, 26 Oct','Decide which store the emails link to','All recent Klaviyo campaigns are labelled "Dave\'s", and the account\'s Shopify feed is davescoffeepods.com. This plan is written for bestcoffeeandtea.com. If the emails go out for Dave\'s, swap the links.'],
+ ['26 Oct','Merge the Mighty Leaf + Flavia drafts','Two separate drafts to 6 lists → one email on 28 Oct to a narrower audience.'],
+ ['31 Oct','Narrow the audience on the "Halloween last call" draft','From 6 lists to Engaged + Customers. After 5 emails on 23–25 Oct there is a real risk of unsubscribes and spam complaints.'],
+ ['1 Nov, 11:59 PM','Take down the Halloween banners and announcement bar','Replace with a "Stock-Up Week" banner and update the top announcement bar.'],
+ ['By 15 Nov','Approve the Black Friday percentage against COGS','20% is a proposal. Check margin per category before committing.'],
+ ['By 15 Nov','Check shipping times before Thanksgiving','Needed to add an "order by" date to the 17–18 Nov emails.'],
+ ['By 20 Nov','Turn on the Abandoned Cart flow in Klaviyo','It is currently set to Manual. On Black Friday this is the flow that recovers the most carts.'],
+ ['By 20 Nov','Turn on the Welcome Series','A draft exists (15% off first order). It needs to be live before the 20–23 Nov sign-ups come in.'],
+ ['By 22 Nov','Create code EARLYBREW in Shopify','20%, valid 23–26 Nov, not combinable with 1+1.'],
+ ['26 Nov, 11:59 PM','Switch on the automatic 20% + Black Friday banners','Same mechanism as Halloween: automatic discount at checkout, announcement bar and countdown to 30 Nov.'],
+ ['Before 9 Nov','Produce November mood images','All mood imagery on the site is Halloween (carved pumpkins). The November designs here are built on product photos, and a few email headers still use Halloween images. A fall/Thanksgiving set can be made in the same style.'],
+];
+
+/* ---------- render ---------- */
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const img=k=>`img/${k}.jpg`;
+function badge(b){return b?`<div class="badge">${esc(b[0])}<small>${esc(b[1])}</small></div>`:''}
+function brand(th){return `<img class="brand" src="img/${th==='bogo'?'logo':'logo-white'}.svg" alt="">`}
+function txt(a){return `<div class="txt">${a.eb?`<div class="eb">${esc(a.eb)}</div>`:''}<div class="hd">${esc(a.hd)}</div>${a.sb?`<div class="sb">${esc(a.sb)}</div>`:''}${a.sticker?`<div class="sticker">${esc(a.sticker[0])} <i>${esc(a.sticker[1])}</i></div>`:''}${a.ft?`<div class="ft">${esc(a.ft)}</div>`:''}</div>`}
+function prodTile(p){return `<div class="it"><img src="${img(p.img)}" alt=""><b>${esc(p.n)}</b>${p.p?`<span>${esc(p.p)}${p.w?` <s>${esc(p.w)}</s>`:''}</span>`:''}</div>`}
+function art(a){
+  if(a.t==='carousel') return art(a.slides[0]);
+  if(a.t==='photo') return `<div class="art ${a.r} th-${a.th}"><img class="bg" src="${img(a.img)}" alt="" style="object-position:${a.pos||'center'}"><div class="shade"></div>${a.brand||a.r==='r916'?brand(a.th):''}${badge(a.badge)}${txt(a)}</div>`;
+  if(a.t==='prod') return `<div class="art prod ${a.r} th-${a.th}" data-n="${a.items.length}">${brand(a.th)}${badge(a.badge)}<div class="txt">${a.eb?`<div class="eb">${esc(a.eb)}</div>`:''}<div class="hd">${esc(a.hd)}</div></div><div class="grid" style="--cols:${a.cols||2}">${a.items.map(prodTile).join('')}</div>${a.ft?`<div class="ft">${esc(a.ft)}</div>`:''}</div>`;
+  if(a.t==='email') return `<div class="art email th-${a.th}"><div class="em-ann">${esc(a.ann)}</div><div class="em-head"><img src="img/logo.svg" alt=""></div><div class="em-hero"><img src="${img(a.hero)}" alt=""></div><div class="em-body"><div class="eb">${esc(a.eb)}</div><div class="hd">${esc(a.hd)}</div><p>${esc(a.body)}</p><span class="em-cta">${esc(a.cta)}</span></div>${a.items.length?`<div class="em-grid">${a.items.map(p=>`<div class="it${p.ph?' ph':''}"><img src="${img(p.img)}" alt=""><b>${esc(p.n)}</b><span>${esc(p.p)}${p.w?` <s>${esc(p.w)}</s>`:''}</span></div>`).join('')}</div>`:''}${a.ps?`<div class="em-ps">${esc(a.ps)}</div>`:''}<div class="em-foot">BEST COFFEE &amp; TEA · BESTCOFFEEANDTEA.COM · UNSUBSCRIBE</div></div>`;
+}
+const CH={email:['Klaviyo','p-email'],social:['FB + IG','p-social'],story:['Story','p-story']};
+const ST={new:['New','s-new'],draft:['Draft exists','s-draft'],prop:['Proposed · needs approval','s-prop'],live:['Offer live','s-live']};
+const DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const MON=['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const dd=s=>{const d=new Date(s+'T12:00:00');return {d,day:d.getDate(),mon:d.getMonth()+1,dow:d.getDay()}};
+const fmtD=x=>`${DOW[x.dow]} ${x.day} ${MON[x.mon]}`;
+let approved={};try{approved=JSON.parse(localStorage.getItem('bct-approved')||'{}')}catch(e){}
+function saveAppr(){try{localStorage.setItem('bct-approved',JSON.stringify(approved))}catch(e){}}
+
+function card(it){
+  const a=it.art, isStory=(a.t!=='carousel'&&a.r==='r916')||(a.t==='carousel'&&a.slides[0].r==='r916');
+  return `<button class="card ${approved[it.id]?'ok':''}" data-id="${it.id}" data-ch="${it.ch}">
+   <div class="thumb ${isStory?'is-story':''}">${art(a)}${a.t==='email'?'<div class="fade"></div>':''}${a.t==='carousel'?`<span class="cnt">1/${a.slides.length}</span>`:''}</div>
+   <div class="meta"><div class="row"><span class="pill ${CH[it.ch][1]}">${CH[it.ch][0]}</span><span>${esc(it.time)}</span><span class="okmark">✓ Approved</span></div>
+   <div class="t">${esc(it.t)}</div><div class="row"><span class="st ${ST[it.st][1]}">${ST[it.st][0]}</span><span>${esc(it.fmt)}</span></div></div></button>`;
+}
+
+// stats
+const n=c=>I.filter(i=>i.ch===c).length;
+document.getElementById('stats').innerHTML=[[n('email'),'Klaviyo emails'],[n('social'),'Posts / reels'],[n('story'),'Stories'],[Object.keys(BLOCKS).length+2,'Promotions in plan']].map(s=>`<div class="stat"><b>${s[0]}</b><span>${s[1]}</span></div>`).join('');
+document.getElementById('sentList').innerHTML=SENT.map(s=>`<li><b>${s[0]}</b> · ${esc(s[1])}</li>`).join('');
+
+// period 1 days
+const hwDates=['2026-10-26','2026-10-27','2026-10-28','2026-10-29','2026-10-30','2026-10-31','2026-11-01'];
+const dayNote={'2026-10-31':'Halloween night','2026-11-01':'Last day of 15% · take banners down at 11:59 PM'};
+document.getElementById('hwDays').innerHTML=hwDates.map(ds=>{const x=dd(ds);const its=I.filter(i=>i.per==='hw'&&i.date===ds);
+ return `<div class="day ${dayNote[ds]?'special':''}"><h4><span>${fmtD(x)}</span><small>${its.length} items</small></h4>${dayNote[ds]?`<div class="daynote">${dayNote[ds]}</div>`:''}${its.map(card).join('')}</div>`}).join('');
+
+// timeline
+const BC={hw:'#3b2c5c',A:'#7a4a2a',B:'#2f5e4a',C:'#9a5a14',D:'#3a3a3a',E:'#0e0e0e'};
+document.getElementById('timeline').innerHTML=`<div class="tlb b-hw" style="grid-column:1 / span 1"><b>1 Nov</b><span>Halloween · last day</span></div>`+Object.entries(BLOCKS).map(([k,b])=>`<div class="tlb b-${k}" style="grid-column:${b.from} / ${b.to+1}"><b>${b.name}</b><span>${b.from}–${b.to} Nov${b.st==='prop'?' · proposed':''}</span></div>`).join('');
+
+// calendar
+const blockOf=d=>{if(d===1)return 'hw';for(const [k,b] of Object.entries(BLOCKS))if(d>=b.from&&d<=b.to)return k;return null};
+const hol={11:'Veterans Day',26:'Thanksgiving',27:'Black Friday',28:'Small Biz Sat',30:'Cyber Monday'};
+let cal=DOW.map(d=>`<div class="dh">${d}</div>`).join('');
+for(let d=1;d<=30;d++){const ds=`2026-11-${String(d).padStart(2,'0')}`;const its=I.filter(i=>i.date===ds);const b=blockOf(d);
+ cal+=`<div class="c" ${b?`data-b style="--bc:${BC[b]==='#0e0e0e'?'var(--accent)':BC[b]}"`:''}><div class="n"><span>${d}</span>${hol[d]?`<i>${hol[d]}</i>`:''}</div>${its.map(i=>`<button class="ev" data-id="${i.id}" data-ch="${i.ch}"><span class="dot d-${i.ch}"></span><span>${esc(i.t)}</span></button>`).join('')}</div>`}
+cal+=`<div class="c out"></div>`.repeat(5);
+document.getElementById('cal').innerHTML=cal;
+
+// november blocks
+document.getElementById('novBlocks').innerHTML=Object.entries(BLOCKS).map(([k,b])=>`<div class="block"><div class="bh"><h3>${b.name}</h3><span class="dates">${b.from}–${b.to} Nov</span><span class="st ${ST[b.st][1]}">${ST[b.st][0]}</span><p>${b.d}</p></div><div class="cards">${I.filter(i=>i.b===k).map(card).join('')}</div></div>`).join('');
+
+// tasks
+let done={};try{done=JSON.parse(localStorage.getItem('bct-tasks')||'{}')}catch(e){}
+document.getElementById('tasks').innerHTML=TASKS.map((t,i)=>`<label class="task"><input type="checkbox" id="task${i}" ${done[i]?'checked':''} data-i="${i}"><div><span class="when">${t[0]}</span><b>${t[1]}</b><span>${t[2]}</span></div></label>`).join('');
+document.getElementById('tasks').addEventListener('change',e=>{done[e.target.dataset.i]=e.target.checked;try{localStorage.setItem('bct-tasks',JSON.stringify(done))}catch(_){}});
+
+// filters
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===c));
+  const f=c.dataset.f;document.querySelectorAll('[data-ch]').forEach(el=>el.hidden=!(f==='all'||el.dataset.ch===f));
+}));
+
+// modal
+const dlg=document.getElementById('dlg');
+function copyBox(label,text){return text?`<div class="cp"><header><span>${label}</span><button type="button" data-copy>Copy</button></header><pre>${esc(text)}</pre></div>`:''}
+function open(id){
+  const it=I.find(i=>i.id===id);if(!it)return;const x=dd(it.date);
+  const a=it.art;
+  document.getElementById('mArt').innerHTML=a.t==='carousel'?`<div class="slides">${a.slides.map(art).join('')}</div><div style="color:#bbb;font-size:12.5px">${a.slides.length} slides · scroll sideways</div>`:art(a);
+  const c=it.copy||{};
+  document.getElementById('mDet').innerHTML=`<div class="mtop"><div class="row" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap"><span class="pill ${CH[it.ch][1]}">${CH[it.ch][0]}</span><span class="st ${ST[it.st][1]}">${ST[it.st][0]}</span>${it.b?`<span style="font-size:12.5px;color:var(--muted)">${BLOCKS[it.b].name}</span>`:''}</div><button class="x" type="button" aria-label="Close" data-close>×</button></div>
+  <h3>${esc(it.t)}</h3>
+  <dl class="kv"><dt>When</dt><dd>${fmtD(x)} 2026 · ${esc(it.time)}</dd><dt>Channel</dt><dd>${esc(it.plat)} · ${esc(it.fmt)}</dd>${it.aud?`<dt>Audience</dt><dd>${esc(it.aud)}</dd>`:''}<dt>Offer</dt><dd>${esc(it.offer)}</dd><dt>Link</dt><dd><a href="${it.link}" target="_blank" rel="noopener">${it.link.replace('https://','')}</a></dd></dl>
+  ${it.note?`<div class="note">${esc(it.note)}</div>`:''}
+  ${copyBox('Subject',c.subject)}${copyBox('Preview text',c.preview)}${copyBox('Email body',c.body)}${copyBox(it.ch==='story'?'Story instructions':'Caption',c.caption)}${copyBox('Hashtags',c.tags)}
+  <label class="appr"><input type="checkbox" id="appr-${it.id}" ${approved[it.id]?'checked':''}> Approved for publishing</label>`;
+  document.querySelector('#mDet .appr input').addEventListener('change',e=>{approved[it.id]=e.target.checked;saveAppr();document.querySelectorAll(`.card[data-id="${it.id}"]`).forEach(el=>el.classList.toggle('ok',e.target.checked))});
+  dlg.showModal();document.getElementById('mArt').scrollTop=0;
+}
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-id]');if(t&&!dlg.contains(t)){open(t.dataset.id);return}
+  if(e.target.closest('[data-close]')||e.target===dlg){dlg.close();return}
+  const b=e.target.closest('[data-copy]');if(b){const txt=b.closest('.cp').querySelector('pre').textContent;
+    const ok=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1400)};
+    try{navigator.clipboard.writeText(txt).then(ok,()=>{sel(b)})}catch(_){sel(b)}}
+});
+function sel(b){const r=document.createRange();r.selectNodeContents(b.closest('.cp').querySelector('pre'));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Select and copy'}
+</script>
+</body></html>
